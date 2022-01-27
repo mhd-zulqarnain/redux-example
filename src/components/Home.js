@@ -3,6 +3,7 @@ import image from './item_image.png';
 import React from 'react'
 
 function Home(props) {
+console.warn("Home",props)
     return (
         <div>
 
@@ -24,6 +25,10 @@ function Home(props) {
                         ()=>{props.addToCartHandler({price:1000,name:'mbl'})}
                     }>
                         Add To Cart</button>
+                        <button onClick={
+                        ()=>{props.removetoCartHandler()}
+                    }>
+                        Remove From cart</button>
                 </div>
             </div>
         </div>
